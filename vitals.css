@@ -1,0 +1,76 @@
+@charset "ISO-8859-1";
+/*hourly  css*/
+#normal{
+	
+	border-bottom:groove;
+}
+/*vital css*/
+.formfill{
+	margin-left:150px;
+
+	text-align:center;
+}
+#date1,#time{
+	font-weight:bold;
+}
+#height{
+	width:50px;
+}
+
+#dot,#unit{
+	width:50px;
+}
+.modal-header{
+	background-color:#dedede;
+	border-radius:10px;
+	height:50px;
+}
+#submit{
+	float: right;
+	width:100px;
+	background-color:#dedede;
+}
+#cancel{
+	float:left;
+	width:100px;
+	background-color:#dedede;
+}
+
+/*
+#header{
+	background-color: #D8D8D8;
+	border-radius:5px ; 
+	text-align: left;
+	height:50px;
+	margin-top:15px;
+	padding-top:15px;
+}
+#close{
+	float:right;
+	color:black;
+}
+
+.navbar{
+	background-color: #D8D8D8;
+	border-radius:5px ; 
+	text-align: left;
+	
+}
+
+.close {
+  position: absolute;
+  right: 35px;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+  align-self: center;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+*/
