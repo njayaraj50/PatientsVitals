@@ -33,54 +33,35 @@ function  refreshTime1() {
 		  		  
 //hover Effect
   		$(document).ready(function(){  
-  		  $("#general").mouseenter(function(){
-  			  $("#general1").show();
+  		  $("#general").click(function(){
+  			  $("#general1").toggle();
   		  })
   		})
-  		  $(document).ready(function(){  
-  		  $("#general1").mouseleave(function(){
-  			  $("#general1").hide();
-  		  })
-  		})
+  		  
   		$(document).ready(function(){  
-  		  $("#cardiac").mouseenter(function(){
-  			  $("#cardiac1").show();
+  		  $("#cardiac").click(function(){
+  			  $("#cardiac1").toggle();
   		  })
   		})
-  		  $(document).ready(function(){  
-  		  $("#cardiac1").mouseleave(function(){
-  			  $("#cardiac1").hide();
-  		  })
-  		})
+  		 
   		$(document).ready(function(){  
-  		  $("#respiratory").mouseenter(function(){
-  			  $("#respiratory1").show();
+  		  $("#respiratory").click(function(){
+  			  $("#respiratory1").toggle();
   		  })
   		})
-  		  $(document).ready(function(){  
-  		  $("#respiratory1").mouseleave(function(){
-  			  $("#respiratory1").hide();
-  		  })
-  		})
+  		 
   		$(document).ready(function(){  
-  		  $("#neuro").mouseenter(function(){
-  			  $("#neuro1").show();
+  		  $("#neuro").click(function(){
+  			  $("#neuro1").toggle();
   		  })
   		})
-  		  $(document).ready(function(){  
-  		  $("#neuro1").mouseleave(function(){
-  			  $("#neuro1").hide();
-  		  })
-  		})
+  		  
   		$(document).ready(function (){
   			$(".nav-link active").click(function(){
   				$(this).css("height","5px");
   			})
   		})
   		
-/*$(document).ready(function(){
-	$('#general2').click(function(){
-		$('#dialog1').
-})
-
-});*/
+  		function alert1(){
+  			alert("Submitted Successfully");
+  		}
