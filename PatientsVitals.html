@@ -48,35 +48,32 @@
           <li class="nav-item">
              <a id="general"class="nav-link " href="#general1" data-bs-toggle="collapse">General</a>
              <div id="general1">
-           <div><button type="button"  id="general2" data-bs-toggle="modal" data-bs-target="#myModal">+</button></div>  
+           <div><button type="button"  id="general2" data-bs-toggle="modal" data-bs-target="#myModal1">+</button></div>  
            </div>  
           </li>
           <li class="nav-item"> 
             <a  id="cardiac" class="nav-link "  href="#cardiac1" data-bs-toggle="collapse">Cardiac</a>
                 <div id="cardiac1">
-                   <div><button type="button"  id="cardiac2" data-bs-toggle="modal" data-bs-target="#myModal">+</button></div>
+                   <div><button type="button"  id="cardiac2" data-bs-toggle="modal" data-bs-target="#myModal2">+</button></div>
                 </div>
           </li>
           <li class="nav-item">
              <a id="respiratory" class="nav-link "  href="#respiratory1" data-bs-toggle="collapse">Respiratory</a>
                  <div id="respiratory1">
-                   <div><button type="button"  id="respiratory2" data-bs-toggle="modal" data-bs-target="#myModal">+</button></div>
+                   <div><button type="button"  id="respiratory2" data-bs-toggle="modal" data-bs-target="#myModal3">+</button></div>
                  </div>
           </li>
           <li class="nav-item">
-             <a id="neuro" class="nav-link active"  href="#neuro1" data-bs-toggle="collapse" data-bs-target="#collapse2">Neuro</a>
-                <div id="neuro1">
-                   <div><button type="button"  id="neuro2" data-bs-toggle="modal" data-bs-target="#myModal">+</button></div>
-                 </div>
+             <a id="neuro" class="nav-link "  href="#neuro1" data-bs-toggle="collapse" data-bs-target="#collapse2">Neuro</a>
+               <div id="neuro1">
+                   <div><button type="button"  id="neuro2" data-bs-toggle="modal" data-bs-target="#myModal4">+</button></div>
+                 </div> 
           </li>
-      </ul> 
-      <div>
-      
-      </div>   
-   </div>  
- </div>
+      </ul>
+      </div>
+  </div>
 <!-- The Modal -->
-<div class="modal" id="myModal">
+<div class="modal" id="myModal1">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog modal-lg modal-dialog modal-dialog-centered">
     <div class="modal-content">
 
@@ -88,7 +85,7 @@
 
       <!-- Modal body -->
       <div class="modal-body" data-bs-spy="scroll" data-bs-target=".modal-header" data-bs-offset="50">
-                  <form class="form-horizontal" id="form1" >
+   <form class="form-horizontal" id="form1" action="sample.html">
     <div class="formfill">           
   <table class="table table-borderless">
     <thead>
@@ -104,7 +101,142 @@
       <tr>
         <td><b>Vitals:</b></td>
         <td id="date1"><input type="text" class="form-control" id="date1" name="date" required></td>
-        <td id="time"><input type="text" class="form-control" id="time" name="time" required></td>
+        <td id="time1"><input type="text" class="form-control" id="time" name="time" required></td>
+      </tr>
+      <tr>
+        <td>Temp:</td>
+        <td><input type="text" class="form-control" name="temperature"  required></td>
+        <td><sup>0</sup>C</td>
+      </tr>
+      <tr>
+        <td>Pulse:</td>
+        <td><input type="text"  class="form-control" name="pulse"  required></td>
+        <td>BPM</td>
+        <td></td>
+      </tr>
+       <tr>
+        <td>S BP:</td>
+        <td><input type="text"  class="form-control" name="SBP"  required></td>
+        <td>mmHg</td>
+      </tr>
+       <tr>
+        <td>D BP:</td>
+        <td><input type="text" class="form-control" name="DBP" required></td>
+        <td>mmHg</td>
+       
+      </tr>
+       <tr>
+        <td>RR:</td>
+        <td><input type="text" class="form-control" name="RR" required></td>
+        <td>BPM</td>
+      </tr>
+       <tr>
+        <td>O<sup>2</sup> Sat:</td>
+        <td><input type="text" class="form-control" name="OxygenSat" required></td>
+        <td>%</td>
+      </tr>
+       <tr>
+        <td>FiO<sup>2</sup>:</td>
+        <td><input type="text" class="form-control" name="FractionofInspiredOxygen" required></td>
+      </tr>
+       <tr>
+        <td>PEEP:</td>
+        <td><input type="text" class="form-control" name="PEEP" required></td>
+        <td>cmH<sub>2</sub>O</td>
+      </tr>
+       <tr>
+        <td>Weight:</td>
+        <td><input type="text" class="form-control" name="weight" required></td>
+        <td>Kg</td>
+      </tr>
+       <tr>
+        <td id="height">Height:</td>
+        <td id="height1"><input type="text" class="form-control" name="height1" required></td>
+        <td id="dot">.</td>
+        <td id="height2"><input type="text" class="form-control" name="height2"  required></td>
+        <td id="unit">m</td>
+      </tr>
+       <tr>
+        <td>BMI:</td>
+        <td><input type="text" class="form-control" name="BMI" required></td>
+      </tr>
+       <tr>
+        <td>AVPU:</td>
+        <td>
+      <select class="form-select mt-0" required>
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+     </select>
+    </td>
+      </tr>
+       <tr>
+        <td>GCS:</td>
+        <td>
+      <select class="form-select mt-0" required>
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+     </select>
+    </td>
+        <td>/15</td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+ <hr>
+<footer>
+<div class="container mt-3">
+<button  type="reset" id="cancel" class="form-control" >Cancel</button>  
+<button type="submit" class="form-control" id="submit">Submit</button>
+</div>
+</footer>
+ 
+</form>
+
+</div>
+<div class="modal-footer">
+       <button  type="reset" id="cancel1" class="form-control" >Cancel</button>
+<button type="submit" class="form-control" id="submit" form="#form1" onclick="alert1()">Submit</button>
+      </div>
+</div>
+</div>
+</div>
+
+      <div class="modal" id="myModal2">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog modal-lg modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h6 class="modal-title">Cardiac Vital-Bounce,David 81 M</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" data-bs-spy="scroll" data-bs-target=".modal-header" data-bs-offset="50">
+                  <form class="form-horizontal" id="form2" action="sample.html">
+    <div class="formfill">           
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th></th>
+        <td>Date</td>
+        <td>Time</td>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Vitals:</b></td>
+        <td id="date2"><input type="text" class="form-control" id="date1" name="date" required></td>
+        <td id="time2"><input type="text" class="form-control" id="time" name="time" required></td>
       </tr>
       <tr>
         <td>Temp:</td>
@@ -195,17 +327,289 @@
 <hr>
 <footer>
 <div class="container mt-3">  
-<button type="reset" id="cancel" class="form-control">Cancel</button>
-<button type="submit" class="form-control" id="submit" onclick="alert1()">Submit</button>
+<button type="reset" id="cancel" class="form-control" >Cancel</button>
+<button type="submit" class="form-control" id="submit" >Submit</button>
 </div>
 </footer>
-
+ 
 </form>
-      </div>
-    </div>
-  </div>
+
 </div>
-         
+<div class="modal-footer">
+       <button  type="reset" id="cancel2" class="form-control" >Cancel</button>
+<button type="submit" class="form-control" id="submit" form="#form1" onclick="alert1()">Submit</button>
+      </div>
+</div>
+</div>
+</div>
+       <div class="modal" id="myModal3">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog modal-lg modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h6 class="modal-title">Respiratory Vital-Bounce,David 81 M</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" data-bs-spy="scroll" data-bs-target=".modal-header" data-bs-offset="50">
+                  <form class="form-horizontal" id="form3" action="sample.html">
+    <div class="formfill">           
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th></th>
+        <td>Date</td>
+        <td>Time</td>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Vitals:</b></td>
+        <td id="date3"><input type="text" class="form-control" id="date1" name="date" required></td>
+        <td id="time3"><input type="text" class="form-control" id="time" name="time" required></td>
+      </tr>
+      <tr>
+        <td>Temp:</td>
+        <td><input type="text" class="form-control" name="temperature" required></td>
+        <td><sup>0</sup>C</td>
+      </tr>
+      <tr>
+        <td>Pulse:</td>
+        <td><input type="text"  class="form-control" name="pulse" required></td>
+        <td>BPM</td>
+        <td></td>
+      </tr>
+       <tr>
+        <td>S BP:</td>
+        <td><input type="text"  class="form-control" name="SBP" required></td>
+        <td>mmHg</td>
+      </tr>
+       <tr>
+        <td>D BP:</td>
+        <td><input type="text" class="form-control" name="DBP" required></td>
+        <td>mmHg</td>
+       
+      </tr>
+       <tr>
+        <td>RR:</td>
+        <td><input type="text" class="form-control" name="RR" required></td>
+        <td>BPM</td>
+      </tr>
+       <tr>
+        <td>O<sup>2</sup> Sat:</td>
+        <td><input type="text" class="form-control" name="OxygenSat" required></td>
+        <td>%</td>
+      </tr>
+       <tr>
+        <td>FiO<sup>2</sup>:</td>
+        <td><input type="text" class="form-control" name="FractionofInspiredOxygen" required></td>
+      </tr>
+       <tr>
+        <td>PEEP:</td>
+        <td><input type="text" class="form-control" name="PEEP" required></td>
+        <td>cmH<sub>2</sub>O</td>
+      </tr>
+       <tr>
+        <td>Weight:</td>
+        <td><input type="text" class="form-control" name="weight" required></td>
+        <td>Kg</td>
+      </tr>
+       <tr>
+        <td id="height">Height:</td>
+        <td id="height1"><input type="text" class="form-control" name="height1" required></td>
+        <td id="dot">.</td>
+        <td id="height2"><input type="text" class="form-control" name="height2"  required></td>
+        <td id="unit">m</td>
+      </tr>
+       <tr>
+        <td>BMI:</td>
+        <td><input type="text" class="form-control" name="BMI" required></td>
+      </tr>
+       <tr>
+        <td>AVPU:</td>
+        <td>
+      <select class="form-select mt-0" required>
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+     </select>
+    </td>
+      </tr>
+       <tr>
+        <td>GCS:</td>
+        <td>
+      <select class="form-select mt-0" required>
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+     </select>
+    </td>
+        <td>/15</td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+<hr>
+<footer>
+<div class="container mt-3">  
+<button type="reset" id="cancel" class="form-control" >Cancel</button>
+<button type="submit" class="form-control" id="submit" >Submit</button>
+</div>
+</footer>
+ 
+</form>
+
+</div>
+<div class="modal-footer">
+       <button  type="reset" id="cancel3" class="form-control" >Cancel</button>
+<button type="submit" class="form-control" id="submit" form="#form3" onclick="alert1()">Submit</button>
+      </div>
+</div>
+</div>
+</div>
+     <div class="modal" id="myModal4">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog modal-lg modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h6 class="modal-title">Neuro Vital-Bounce,David 81 M</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" data-bs-spy="scroll" data-bs-target=".modal-header" data-bs-offset="50">
+                  <form class="form-horizontal" id="form4" action="sample.html" >
+    <div class="formfill">           
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th></th>
+        <td>Date</td>
+        <td>Time</td>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Vitals:</b></td>
+        <td id="date4"><input type="text" class="form-control" id="date1" name="date" required></td>
+        <td id="time4"><input type="text" class="form-control" id="time" name="time" required></td>
+      </tr>
+      <tr>
+        <td>Temp:</td>
+        <td><input type="text" class="form-control" name="temperature" required></td>
+        <td><sup>0</sup>C</td>
+      </tr>
+      <tr>
+        <td>Pulse:</td>
+        <td><input type="text"  class="form-control" name="pulse" required></td>
+        <td>BPM</td>
+        <td></td>
+      </tr>
+       <tr>
+        <td>S BP:</td>
+        <td><input type="text"  class="form-control" name="SBP" required></td>
+        <td>mmHg</td>
+      </tr>
+       <tr>
+        <td>D BP:</td>
+        <td><input type="text" class="form-control" name="DBP" required></td>
+        <td>mmHg</td>
+       
+      </tr>
+       <tr>
+        <td>RR:</td>
+        <td><input type="text" class="form-control" name="RR" required></td>
+        <td>BPM</td>
+      </tr>
+       <tr>
+        <td>O<sup>2</sup> Sat:</td>
+        <td><input type="text" class="form-control" name="OxygenSat" required></td>
+        <td>%</td>
+      </tr>
+       <tr>
+        <td>FiO<sup>2</sup>:</td>
+        <td><input type="text" class="form-control" name="FractionofInspiredOxygen" required></td>
+      </tr>
+       <tr>
+        <td>PEEP:</td>
+        <td><input type="text" class="form-control" name="PEEP" required></td>
+        <td>cmH<sub>2</sub>O</td>
+      </tr>
+       <tr>
+        <td>Weight:</td>
+        <td><input type="text" class="form-control" name="weight" required></td>
+        <td>Kg</td>
+      </tr>
+       <tr>
+        <td id="height">Height:</td>
+        <td id="height1"><input type="text" class="form-control" name="height1" required></td>
+        <td id="dot">.</td>
+        <td id="height2"><input type="text" class="form-control" name="height2"  required></td>
+        <td id="unit">m</td>
+      </tr>
+       <tr>
+        <td>BMI:</td>
+        <td><input type="text" class="form-control" name="BMI" required></td>
+      </tr>
+       <tr>
+        <td>AVPU:</td>
+        <td>
+      <select class="form-select mt-0" required>
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+     </select>
+    </td>
+      </tr>
+       <tr>
+        <td>GCS:</td>
+        <td>
+      <select class="form-select mt-0" required>
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+     </select>
+    </td>
+        <td>/15</td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+<hr>
+<footer>
+<div class="container mt-3">  
+<button type="reset" id="cancel" class="form-control" >Cancel</button>
+<button type="submit" class="form-control" id="submit" >Submit</button>
+</div>
+</footer>
+ 
+</form>
+
+</div>
+<div class="modal-footer">
+       <button  type="reset" id="cancel4" class="form-control" >Cancel</button>
+<button type="submit" class="form-control" id="submit" form="#form3" onclick="alert1()">Submit</button>
+      </div>
+</div>
+</div>
+</div> 
  <div class="collapse" id="collapse2">
     <div class="container mt-3">
         <ul class="nav nav-tabs">

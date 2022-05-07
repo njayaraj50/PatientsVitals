@@ -29,13 +29,19 @@
 	float: right;
 	width:100px;
 	background-color:#dedede;
-}
+	}
 #cancel{
 	float:left;
 	width:100px;
 	background-color:#dedede;
+	margin-right:500px;
+	}
+#cancel1,#cancel2,#cancel3,#cancel4{
+	float:left;
+	width:100px;
+	background-color:#dedede;
+	margin-right:500px;
 }
-
 /*
 #header{
 	background-color: #D8D8D8;
