@@ -180,9 +180,7 @@ function  refreshTime1() {
   			})
   		})
   		
-  		function alert1(){
-  			alert("Submitted Successfully");
-  		}
+  		
   		$(document).ready(function (){
   			$("#cancel1").click(function(){
   				$("#form1")[0].reset();
@@ -203,9 +201,68 @@ function  refreshTime1() {
   				$("#form4")[0].reset();
   			})
   		})
-  	function sample(){
-  			location.href="/UITask/src/sample.html";
-  		}
-  		$(".nav-item").click(function(){
-  			$(this).css({"border-left-color":"black","border-top-color":"black","border-right-color":"black"});
+  	$(document).ready(function (){
+  			$("#submit1").click(function(){
+  				alert("Submitted Successfully");
+  			})
   		})
+  		$(document).ready(function (){
+  			$("#submit2").click(function(){
+  				alert("Submitted Successfully");
+  			})
+  		})
+  		$(document).ready(function (){
+  			$("#submit3").click(function(){
+  				alert("Submitted Successfully");
+  			})
+  		})
+  		$(document).ready(function (){
+  			$("#submit4").click(function(){
+  				alert("Submitted Successfully");
+  			})
+  		})
+  		function formValidation(){
+  			var frmvalid = $("#form1").valid();
+  			if(!frmvalid){
+  				return false;
+  			}
+  			else{
+  				alert("Submitted Successfully");
+  				location.href="sample.html";
+  			}
+  		}
+  		function formValidation2(){
+  			var frmvalid = $("#form2").valid();
+  			if(!frmvalid){
+  				return false;
+  			}
+  			else{
+  				alert("Submitted Successfully");
+  				location.href="sample.html";
+  			}
+  		}
+  		function formValidation3(){
+  			var frmvalid = $("#form3").valid();
+  			if(!frmvalid){
+  				return false;
+  			}
+  			else{
+  				alert("Submitted Successfully");
+  				location.href="sample.html";
+  			}
+  		}
+  		function formValidation4(){
+  			var frmvalid = $("#form4").valid();
+  			if(!frmvalid){
+  				return false;
+  			}
+  			else{
+  				alert("Submitted Successfully");
+  				location.href="sample.html";
+  			}
+  		}
+  		$("li.nav-item").click(function(){
+  			$(this).addClass("active");
+  		
+  		})
+  		

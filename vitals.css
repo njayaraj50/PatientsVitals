@@ -42,6 +42,11 @@
 	background-color:#dedede;
 	margin-right:500px;
 }
+#submit1,#submit2,#submit3,#submit4{
+	float: right;
+	width:100px;
+	background-color:#dedede;
+	}
 /*
 #header{
 	background-color: #D8D8D8;

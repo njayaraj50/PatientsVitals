@@ -9,6 +9,7 @@
   <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
   <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script> 
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="vitals.css">
   <script src="dialog.js"></script>
@@ -34,7 +35,7 @@
  <div class="container mt-3">
       <ul class="nav nav-tabs">
          <li class="nav-item">
-            <a id="vitals" class="nav-link " href="#collapse1" data-bs-toggle="collapse">Vitals Table</a>
+            <a id="vitals" class="nav-link" href="#collapse1" data-bs-toggle="collapse">Vitals Table</a>
          </li>
          <li class="nav-item">
             <a class="nav-link " href="#" data-bs-toggle="collapse">Graph</a>
@@ -45,8 +46,8 @@
  <div class="collapse" id="collapse1">
    <div class="container mt-3">
        <ul class="nav nav-tabs">
-          <li class="nav-item">
-             <a id="general"class="nav-link " href="#general1" data-bs-toggle="collapse">General</a>
+          <li class="nav-item" >
+             <a id="general"class="nav-link" href="#general1" data-bs-toggle="collapse">General</a>
              <div id="general1">
            <div><button type="button"  id="general2" data-bs-toggle="modal" data-bs-target="#myModal1">+</button></div>  
            </div>  
@@ -70,6 +71,7 @@
                  </div> 
           </li>
       </ul>
+     
       </div>
   </div>
 <!-- The Modal -->
@@ -193,7 +195,7 @@
 <footer>
 <div class="container mt-3">
 <button  type="reset" id="cancel" class="form-control" >Cancel</button>  
-<button type="submit" class="form-control" id="submit">Submit</button>
+<button type="submit" class="form-control" id="submit1">Submit</button>
 </div>
 </footer>
  
@@ -201,8 +203,8 @@
 
 </div>
 <div class="modal-footer">
-       <button  type="reset" id="cancel1" class="form-control" >Cancel</button>
-<button type="submit" class="form-control" id="submit" form="#form1" onclick="alert1()">Submit</button>
+       <button  type="reset" id="cancel1" >Cancel</button>
+<button type="submit" id="submit" form="#form1" onclick="formValidation();">Submit</button>
       </div>
 </div>
 </div>
@@ -328,7 +330,7 @@
 <footer>
 <div class="container mt-3">  
 <button type="reset" id="cancel" class="form-control" >Cancel</button>
-<button type="submit" class="form-control" id="submit" >Submit</button>
+<button type="submit" class="form-control" id="submit2" >Submit</button>
 </div>
 </footer>
  
@@ -336,8 +338,8 @@
 
 </div>
 <div class="modal-footer">
-       <button  type="reset" id="cancel2" class="form-control" >Cancel</button>
-<button type="submit" class="form-control" id="submit" form="#form1" onclick="alert1()">Submit</button>
+       <button  type="reset" id="cancel2"  >Cancel</button>
+<button type="submit" id="submit" form="#form2" onclick="formValidation2();">Submit</button>
       </div>
 </div>
 </div>
@@ -462,7 +464,7 @@
 <footer>
 <div class="container mt-3">  
 <button type="reset" id="cancel" class="form-control" >Cancel</button>
-<button type="submit" class="form-control" id="submit" >Submit</button>
+<button type="submit" class="form-control" id="submit3" >Submit</button>
 </div>
 </footer>
  
@@ -471,7 +473,7 @@
 </div>
 <div class="modal-footer">
        <button  type="reset" id="cancel3" class="form-control" >Cancel</button>
-<button type="submit" class="form-control" id="submit" form="#form3" onclick="alert1()">Submit</button>
+<button type="submit" class="form-control" id="submit" form="#form3" onclick="formValidation3();">Submit</button>
       </div>
 </div>
 </div>
@@ -596,7 +598,7 @@
 <footer>
 <div class="container mt-3">  
 <button type="reset" id="cancel" class="form-control" >Cancel</button>
-<button type="submit" class="form-control" id="submit" >Submit</button>
+<button type="submit" class="form-control" id="submit4">Submit</button>
 </div>
 </footer>
  
@@ -604,8 +606,8 @@
 
 </div>
 <div class="modal-footer">
-       <button  type="reset" id="cancel4" class="form-control" >Cancel</button>
-<button type="submit" class="form-control" id="submit" form="#form3" onclick="alert1()">Submit</button>
+       <button  type="reset" id="cancel4" >Cancel</button>
+<button type="submit" class="form-control" id="submit" form="#form4" onclick="formValidation()4;">Submit</button>
       </div>
 </div>
 </div>
