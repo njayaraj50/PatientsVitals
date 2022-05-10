@@ -10,6 +10,9 @@
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
   <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script> 
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script> 
+  <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="vitals.css">
   <script src="dialog.js"></script>
@@ -32,10 +35,11 @@
   </div>
 </div>
 <!-- Tabs -->
- <div class="container mt-3">
-      <ul class="nav nav-tabs">
-         <li class="nav-item">
-            <a id="vitals" class="nav-link" href="#collapse1" data-bs-toggle="collapse">Vitals Table</a>
+
+<div class="container mt-3 ">
+      <ul class="nav nav-tabs" id="navMenus1">
+         <li class="nav-item" >
+            <a  class="nav-link " href="#collapse1" data-bs-toggle="collapse">Vitals Table</a>
          </li>
          <li class="nav-item">
             <a class="nav-link " href="#" data-bs-toggle="collapse">Graph</a>
@@ -44,8 +48,8 @@
 </div>
 
  <div class="collapse" id="collapse1">
-   <div class="container mt-3">
-       <ul class="nav nav-tabs">
+   <div class="container mt-3" >
+       <ul class="nav nav-tabs" id="navMenus2">
           <li class="nav-item" >
              <a id="general"class="nav-link" href="#general1" data-bs-toggle="collapse">General</a>
              <div id="general1">
@@ -70,10 +74,12 @@
                    <div><button type="button"  id="neuro2" data-bs-toggle="modal" data-bs-target="#myModal4">+</button></div>
                  </div> 
           </li>
+           
       </ul>
      
       </div>
   </div>
+  
 <!-- The Modal -->
 <div class="modal" id="myModal1">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog modal-lg modal-dialog modal-dialog-centered">
@@ -114,7 +120,6 @@
         <td>Pulse:</td>
         <td><input type="text"  class="form-control" name="pulse"  required></td>
         <td>BPM</td>
-        <td></td>
       </tr>
        <tr>
         <td>S BP:</td>
@@ -177,12 +182,12 @@
        <tr>
         <td>GCS:</td>
         <td>
-      <select class="form-select mt-0" required>
-            <option></option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option> 
+      <select class="form-select" id="gcs" name="gcs" required>
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option> 
      </select>
     </td>
         <td>/15</td>
@@ -191,20 +196,20 @@
     </tbody>
   </table>
 </div>
- <hr>
+<!-- <hr>
 <footer>
 <div class="container mt-3">
 <button  type="reset" id="cancel" class="form-control" >Cancel</button>  
 <button type="submit" class="form-control" id="submit1">Submit</button>
 </div>
-</footer>
+</footer> -->
  
 </form>
 
 </div>
 <div class="modal-footer">
        <button  type="reset" id="cancel1" >Cancel</button>
-<button type="submit" id="submit" form="#form1" onclick="formValidation();">Submit</button>
+<button type="submit" id="submit1" form="#form1" onclick="formValidation();">Submit</button>
       </div>
 </div>
 </div>
@@ -237,109 +242,90 @@
     <tbody>
       <tr>
         <td><b>Vitals:</b></td>
-        <td id="date2"><input type="text" class="form-control" id="date1" name="date" required></td>
-        <td id="time2"><input type="text" class="form-control" id="time" name="time" required></td>
+        <td id="date2"><input type="text" class="form-control" name="date" required></td>
+        <td id="time2"><input type="text" class="form-control" name="time" required></td>
       </tr>
       <tr>
-        <td>Temp:</td>
-        <td><input type="text" class="form-control" name="temperature" required></td>
-        <td><sup>0</sup>C</td>
+        <td>R<sub>ao</sub>:</td>
+        <td><input type="text" class="form-control" name="Rao" required></td>
+        <td>mmHg.s.ml-l</td>
       </tr>
       <tr>
-        <td>Pulse:</td>
-        <td><input type="text"  class="form-control" name="pulse" required></td>
-        <td>BPM</td>
-        <td></td>
+        <td>C<sub>ao</sub>:</td>
+        <td><input type="text"  class="form-control" name="Cao" required></td>
+        <td>ml/mmHg</td>
       </tr>
        <tr>
-        <td>S BP:</td>
-        <td><input type="text"  class="form-control" name="SBP" required></td>
-        <td>mmHg</td>
+        <td>R<sub>sv</sub>:</td>
+        <td><input type="text"  class="form-control" name="Rsv" required></td>
+        <td>mmHg.s.ml-l</td>
       </tr>
        <tr>
-        <td>D BP:</td>
-        <td><input type="text" class="form-control" name="DBP" required></td>
-        <td>mmHg</td>
+        <td>C<sub>SAC</sub>:</td>
+        <td><input type="text" class="form-control" name="Sac" required></td>
+        <td>ml/mmHg</td>
        
       </tr>
        <tr>
-        <td>RR:</td>
-        <td><input type="text" class="form-control" name="RR" required></td>
-        <td>BPM</td>
+        <td>R<sub>CA</sub>:</td>
+        <td><input type="text" class="form-control" name="Rca" required></td>
+        <td>mmHg.s.ml-l</td>
       </tr>
        <tr>
-        <td>O<sup>2</sup> Sat:</td>
-        <td><input type="text" class="form-control" name="OxygenSat" required></td>
-        <td>%</td>
+        <td>R<sub>ub</sub>:</td>
+        <td><input type="text" class="form-control" name="Rub" required></td>
       </tr>
        <tr>
-        <td>FiO<sup>2</sup>:</td>
-        <td><input type="text" class="form-control" name="FractionofInspiredOxygen" required></td>
+        <td>R<sub>pda</sub>:</td>
+        <td><input type="text" class="form-control" name="Rpda" required></td>
+        <td>mmHg.s.ml-l</td>
       </tr>
        <tr>
-        <td>PEEP:</td>
-        <td><input type="text" class="form-control" name="PEEP" required></td>
-        <td>cmH<sub>2</sub>O</td>
+        <td>P<sub>CVO</sub>:</td>
+        <td><input type="text" class="form-control" name="Pcvo" required></td>
+        <td>mmHg</td>
       </tr>
        <tr>
-        <td>Weight:</td>
-        <td><input type="text" class="form-control" name="weight" required></td>
-        <td>Kg</td>
+        <td>Q<sub>mv</sub>:</td>
+        <td><input type="text" class="form-control" name="Qmv" required></td>
+       
       </tr>
        <tr>
-        <td id="height">Height:</td>
-        <td id="height1"><input type="text" class="form-control" name="height1" required></td>
-        <td id="dot">.</td>
-        <td id="height2"><input type="text" class="form-control" name="height2"  required></td>
-        <td id="unit">m</td>
+        <td>CBD:</td>
+        <td id="height1"><input type="text" class="form-control" name="cbd" required></td>
+        <td>kg/m<sup>3</sup></td>
       </tr>
        <tr>
-        <td>BMI:</td>
-        <td><input type="text" class="form-control" name="BMI" required></td>
+        <td>CO:</td>
+        <td><input type="text" class="form-control" name="CO" required></td>
+        <td>/min</td>
       </tr>
        <tr>
-        <td>AVPU:</td>
-        <td>
-      <select class="form-select mt-0" required>
-            <option></option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option> 
-     </select>
-    </td>
+        <td>HR:</td>
+        <td><input type="text" class="form-control" name="HR" required></td>
+        <td>beats/min</td>
       </tr>
        <tr>
-        <td>GCS:</td>
-        <td>
-      <select class="form-select mt-0" required>
-            <option></option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option> 
-     </select>
-    </td>
-        <td>/15</td>
+        <td>T:</td>
+        <td><input type="text" class="form-control" name="T" required></td>
+        <td>s</td>
       </tr>
-     
     </tbody>
   </table>
 </div>
-<hr>
+ <!-- <hr>
 <footer>
-<div class="container mt-3">  
-<button type="reset" id="cancel" class="form-control" >Cancel</button>
-<button type="submit" class="form-control" id="submit2" >Submit</button>
+<div class="container mt-3">
+<button  type="reset" id="cancel" class="form-control" >Cancel</button>  
+<button type="submit" class="form-control" id="submit1">Submit</button>
 </div>
-</footer>
- 
+</footer> -->
 </form>
 
 </div>
 <div class="modal-footer">
        <button  type="reset" id="cancel2"  >Cancel</button>
-<button type="submit" id="submit" form="#form2" onclick="formValidation2();">Submit</button>
+<button type="submit" id="submit2" form="#form2" onclick="formValidation2();">Submit</button>
       </div>
 </div>
 </div>
@@ -371,109 +357,86 @@
     <tbody>
       <tr>
         <td><b>Vitals:</b></td>
-        <td id="date3"><input type="text" class="form-control" id="date1" name="date" required></td>
-        <td id="time3"><input type="text" class="form-control" id="time" name="time" required></td>
+        <td id="date3"><input type="text" class="form-control" name="date" required></td>
+        <td id="time3"><input type="text" class="form-control" name="time" required></td>
       </tr>
       <tr>
-        <td>Temp:</td>
-        <td><input type="text" class="form-control" name="temperature" required></td>
-        <td><sup>0</sup>C</td>
+        <td>Tidal volume(At Rest):</td>
+        <td><input type="text" class="form-control" name="TV1" required></td>
+        <td>ml</td>
       </tr>
       <tr>
-        <td>Pulse:</td>
-        <td><input type="text"  class="form-control" name="pulse" required></td>
-        <td>BPM</td>
-        <td></td>
+        <td>Tidal volume(At Exercise):</td>
+        <td><input type="text"  class="form-control" name="TV2" required></td>
+        <td>ml</td>
       </tr>
        <tr>
-        <td>S BP:</td>
-        <td><input type="text"  class="form-control" name="SBP" required></td>
-        <td>mmHg</td>
+        <td>Inspiratory Reserve Volume(At Rest):</td>
+        <td><input type="text"  class="form-control" name="IRV1" required></td>
+        <td>ml</td>
       </tr>
        <tr>
-        <td>D BP:</td>
-        <td><input type="text" class="form-control" name="DBP" required></td>
-        <td>mmHg</td>
-       
+        <td>Inspiratory Reserve Volume(At Exercise):</td>
+        <td><input type="text"  class="form-control" name="IRV2" required></td>
+        <td>ml</td>
       </tr>
        <tr>
-        <td>RR:</td>
-        <td><input type="text" class="form-control" name="RR" required></td>
-        <td>BPM</td>
+        <td>Vital Capacity(At Rest):</td>
+        <td><input type="text" class="form-control" name="VC1" required></td>
+        <td>ml</td>
       </tr>
        <tr>
-        <td>O<sup>2</sup> Sat:</td>
-        <td><input type="text" class="form-control" name="OxygenSat" required></td>
-        <td>%</td>
+        <td>Vital Capacity(At Exercise):</td>
+        <td><input type="text" class="form-control" name="VC2" required></td>
+        <td>ml</td>
       </tr>
        <tr>
-        <td>FiO<sup>2</sup>:</td>
-        <td><input type="text" class="form-control" name="FractionofInspiredOxygen" required></td>
+        <td>Residual Volume(At Rest):</td>
+        <td><input type="text" class="form-control" name="RV1" required></td>
+        <td>ml</td>
       </tr>
        <tr>
-        <td>PEEP:</td>
-        <td><input type="text" class="form-control" name="PEEP" required></td>
-        <td>cmH<sub>2</sub>O</td>
+        <td>Residual Volume(At Exercise):</td>
+        <td><input type="text" class="form-control" name="RV2" required></td>
+        <td>ml</td>
       </tr>
        <tr>
-        <td>Weight:</td>
-        <td><input type="text" class="form-control" name="weight" required></td>
-        <td>Kg</td>
+        <td>Total Lung Capacity(At Rest):</td>
+        <td><input type="text" class="form-control" name="TLC1" required></td>
+        <td>ml</td>
       </tr>
        <tr>
-        <td id="height">Height:</td>
-        <td id="height1"><input type="text" class="form-control" name="height1" required></td>
-        <td id="dot">.</td>
-        <td id="height2"><input type="text" class="form-control" name="height2"  required></td>
-        <td id="unit">m</td>
+        <td>Total Lung Capacity(At Exercise):</td>
+        <td><input type="text" class="form-control" name="TLC2" required></td>
+        <td>ml</td>
       </tr>
        <tr>
-        <td>BMI:</td>
-        <td><input type="text" class="form-control" name="BMI" required></td>
+        <td>Minute Ventilation(At Rest):</td>
+        <td><input type="text" class="form-control" name="VE1" required></td>
+        <td>L/min</td>
       </tr>
-       <tr>
-        <td>AVPU:</td>
-        <td>
-      <select class="form-select mt-0" required>
-            <option></option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option> 
-     </select>
-    </td>
+        <tr>
+        <td>Minute Ventilation(At Exercise):</td>
+        <td><input type="text" class="form-control" name="VE2" required></td>
+        <td>L/min</td>
       </tr>
-       <tr>
-        <td>GCS:</td>
-        <td>
-      <select class="form-select mt-0" required>
-            <option></option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option> 
-     </select>
-    </td>
-        <td>/15</td>
-      </tr>
-     
+      
     </tbody>
   </table>
 </div>
-<hr>
+ <!-- <hr>
 <footer>
-<div class="container mt-3">  
-<button type="reset" id="cancel" class="form-control" >Cancel</button>
-<button type="submit" class="form-control" id="submit3" >Submit</button>
+<div class="container mt-3">
+<button  type="reset" id="cancel" class="form-control" >Cancel</button>  
+<button type="submit" class="form-control" id="submit1">Submit</button>
 </div>
-</footer>
- 
+</footer> -->
 </form>
 
 </div>
 <div class="modal-footer">
        <button  type="reset" id="cancel3" class="form-control" >Cancel</button>
-<button type="submit" class="form-control" id="submit" form="#form3" onclick="formValidation3();">Submit</button>
+<button type="submit" class="form-control" id="submit3" form="#form3" onclick="formValidation3();">Submit</button>
       </div>
 </div>
 </div>
@@ -505,116 +468,178 @@
     <tbody>
       <tr>
         <td><b>Vitals:</b></td>
-        <td id="date4"><input type="text" class="form-control" id="date1" name="date" required></td>
-        <td id="time4"><input type="text" class="form-control" id="time" name="time" required></td>
+        <td id="date4"><input type="text" class="form-control"  name="date" required></td>
+        <td id="time4"><input type="text" class="form-control"  name="time" required></td>
       </tr>
       <tr>
-        <td>Temp:</td>
-        <td><input type="text" class="form-control" name="temperature" required></td>
-        <td><sup>0</sup>C</td>
+        <td>Reaction L:</td>
+        <td>
+      <select class="form-select mt-0" required>
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+     </select>
+    </td>
+       
       </tr>
       <tr>
-        <td>Pulse:</td>
-        <td><input type="text"  class="form-control" name="pulse" required></td>
-        <td>BPM</td>
-        <td></td>
+        <td>Reaction R:</td>
+        <td>
+      <select class="form-select mt-0" name="ReacR" id="ReacR"required>
+            <option value=""></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+     </select>
+    </td>
+        
       </tr>
        <tr>
-        <td>S BP:</td>
-        <td><input type="text"  class="form-control" name="SBP" required></td>
-        <td>mmHg</td>
+        <td>Equality:</td>
+        <td>
+      <select class="form-select mt-0" name="equality" id="equality" required>
+            <option value=""></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+     </select>
+    </td>
       </tr>
        <tr>
-        <td>D BP:</td>
+        <td>Size L:</td>
         <td><input type="text" class="form-control" name="DBP" required></td>
-        <td>mmHg</td>
+        <td>mm</td>
        
       </tr>
        <tr>
-        <td>RR:</td>
+        <td>Size R:</td>
         <td><input type="text" class="form-control" name="RR" required></td>
-        <td>BPM</td>
+        <td>mm</td>
       </tr>
        <tr>
-        <td>O<sup>2</sup> Sat:</td>
-        <td><input type="text" class="form-control" name="OxygenSat" required></td>
-        <td>%</td>
+        <td>Eyes:</td>
+        <td>
+      <select class="form-select mt-0" name="eyes" id="eyes" required>
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+     </select>
+    </td>
+        
       </tr>
        <tr>
-        <td>FiO<sup>2</sup>:</td>
-        <td><input type="text" class="form-control" name="FractionofInspiredOxygen" required></td>
+        <td>Verbal:</td>
+        <td>
+      <select class="form-select mt-0" name="verbal" id="verbal" required>
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+     </select>
+    </td>
       </tr>
        <tr>
-        <td>PEEP:</td>
-        <td><input type="text" class="form-control" name="PEEP" required></td>
-        <td>cmH<sub>2</sub>O</td>
+        <td>Motor:</td>
+        <td>
+      <select class="form-select mt-0" name="motor" id="motor" required>
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+     </select>
+    </td>
       </tr>
        <tr>
-        <td>Weight:</td>
-        <td><input type="text" class="form-control" name="weight" required></td>
-        <td>Kg</td>
+        <td>Movement Arms L:</td>
+        <td>
+      <select class="form-select mt-0" id="armsL" name="armsL"required>
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+     </select>
+    </td>
       </tr>
        <tr>
-        <td id="height">Height:</td>
-        <td id="height1"><input type="text" class="form-control" name="height1" required></td>
-        <td id="dot">.</td>
-        <td id="height2"><input type="text" class="form-control" name="height2"  required></td>
-        <td id="unit">m</td>
+        <td> Movement Arms R :</td>
+        <td>
+      <select class="form-select mt-0"id="armsR" name="armsR" required>
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+     </select>
+    </td>
+        
       </tr>
        <tr>
-        <td>BMI:</td>
+        <td>Duration:</td>
         <td><input type="text" class="form-control" name="BMI" required></td>
+        <td>min</td>
       </tr>
        <tr>
-        <td>AVPU:</td>
-        <td>
-      <select class="form-select mt-0" required>
-            <option></option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option> 
-     </select>
-    </td>
+        <td>CSF Drainage:</td>
+        <td><input type="text" class="form-control" name="csf" required></td>
+        <td>ml</td>
       </tr>
        <tr>
-        <td>GCS:</td>
-        <td>
-      <select class="form-select mt-0" required>
-            <option></option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option> 
-     </select>
-    </td>
-        <td>/15</td>
-      </tr>
-     
+        <td>MAP:</td>
+        <td><input type="text" class="form-control" name="map" required></td>
+        <td>mmHg</td>
+       </tr>
+     <tr>
+        <td>ICP:</td>
+        <td><input type="text" class="form-control" name="icp" required></td>
+        <td>mMHg</td>
+       </tr>
+       <tr>
+        <td>CPP:</td>
+        <td><input type="text" class="form-control" name="cpp" required></td>
+        <td>mmHg</td>
+       </tr>
+       <tr>
+        <td>Cerebral O2:</td>
+        <td><input type="text" class="form-control" name="cerebralo2" required></td>
+        <td>%</td>
+       </tr>
+       <tr>
+        <td>Cerebral Temp:</td>
+        <td><input type="text" class="form-control" name="cerebraltemp" required></td>
+        <td><sup>0</sup>C</td>
+       </tr>
     </tbody>
   </table>
 </div>
-<hr>
+ <!-- <hr>
 <footer>
-<div class="container mt-3">  
-<button type="reset" id="cancel" class="form-control" >Cancel</button>
-<button type="submit" class="form-control" id="submit4">Submit</button>
+<div class="container mt-3">
+<button  type="reset" id="cancel" class="form-control" >Cancel</button>  
+<button type="submit" class="form-control" id="submit1">Submit</button>
 </div>
-</footer>
- 
+</footer> -->
 </form>
 
 </div>
 <div class="modal-footer">
        <button  type="reset" id="cancel4" >Cancel</button>
-<button type="submit" class="form-control" id="submit" form="#form4" onclick="formValidation()4;">Submit</button>
+<button type="submit" class="form-control" id="submit4" form="#form4" onclick="formValidation4();">Submit</button>
       </div>
 </div>
 </div>
 </div> 
  <div class="collapse" id="collapse2">
     <div class="container mt-3">
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs" id="navMenus3">
            <li class="nav-item">
               <a class="nav-link "  href="#collapse3" data-bs-toggle="collapse">Hourly</a>
            </li>

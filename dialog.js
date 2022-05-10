@@ -174,13 +174,8 @@ function  refreshTime1() {
   			  $("#neuro1").hide();
   		  })
   		})
-  		$(document).ready(function (){
-  			$(".nav-link active").click(function(){
-  				$(this).css("height","5px");
-  			})
-  		})
   		
-  		
+  		//Reset
   		$(document).ready(function (){
   			$("#cancel1").click(function(){
   				$("#form1")[0].reset();
@@ -201,26 +196,7 @@ function  refreshTime1() {
   				$("#form4")[0].reset();
   			})
   		})
-  	$(document).ready(function (){
-  			$("#submit1").click(function(){
-  				alert("Submitted Successfully");
-  			})
-  		})
-  		$(document).ready(function (){
-  			$("#submit2").click(function(){
-  				alert("Submitted Successfully");
-  			})
-  		})
-  		$(document).ready(function (){
-  			$("#submit3").click(function(){
-  				alert("Submitted Successfully");
-  			})
-  		})
-  		$(document).ready(function (){
-  			$("#submit4").click(function(){
-  				alert("Submitted Successfully");
-  			})
-  		})
+  	//submit
   		function formValidation(){
   			var frmvalid = $("#form1").valid();
   			if(!frmvalid){
@@ -261,8 +237,78 @@ function  refreshTime1() {
   				location.href="sample.html";
   			}
   		}
-  		$("li.nav-item").click(function(){
-  			$(this).addClass("active");
-  		
-  		})
+  		//option validator
+  		$(document).ready(function () {
+
+  		    $('#form1').validate({ // initialize the plugin
+  		        rules: {
+  		            gcs: {
+  		                selectcheck: true
+  		            }
+  		        }
+  		    });
+
+  		    jQuery.validator.addMethod('selectcheck', function (value) {
+  		        return (value != '0');
+  		    }, "This field is required");
+
+  		});
+  		$(document).ready(function () {
+
+  		    $('#form4').validate({ // initialize the plugin
+  		        rules: {
+  		            ReacR: {
+  		                selectcheck: true
+  		            },
+  		            equality: {
+  		            	selectcheck: true
+  		            },
+  		          eyes: {
+		            	selectcheck: true
+		            },
+		            verbal: {
+  		            	selectcheck: true
+  		            },
+  		          motor: {
+		            	selectcheck: true
+		            },
+		            armsL: {
+		            	selectcheck: true
+		            },
+		            armsR: {
+		            	selectcheck: true
+		            }
+  		        }
+  		    });
+  		  
+
+  		    jQuery.validator.addMethod('selectcheck', function (value) {
+  		        return (value != '0');
+  		    }, "This field is required");
+
+  		});
+  		//active class
+  		$(document).ready(function () {
+  		$("#navMenus1").on('click', 'li', function () {
+			   $("#navMenus1 li.active").removeClass("active");
+			    // adding classname 'active' to current click li 
+			    $(this).addClass("active");
+			});
+  		});
+  	  		
+  		$(document).ready(function () {
+  	  		
+  				  $('.container li').click(function() {
+  				    $(this).siblings('li').removeClass('active');
+  				    $(this).addClass('active');
+  				});
+  				});
+  	  		
+  		$(document).ready(function () {
+  	  		$("#navMenus3").on('click', 'li', function () {
+  				   $("#navMenus3 li.active").removeClass("active");
+  				    // adding classname 'active' to current click li 
+  				    $(this).addClass("active");
+  				});
+  	  		});
   		

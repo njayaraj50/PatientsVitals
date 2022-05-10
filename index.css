@@ -10,14 +10,6 @@
 	font-weight:bold;
 	font-size: large;
 }
-/*#myDialog{
-	width:900px;
-	height:450px;
-}
-#modalDialogBox{
-	width:850px;
-	height:400px;
-}*/
 
 #general1,#cardiac1,#respiratory1,#neuro1{
 	display:none;
@@ -29,18 +21,20 @@
 }
 
 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
-    
+    border-bottom:1px solid white;  
     border-left:1px solid black;
     border-top:1px solid black;
     border-right:1px solid black;
-    border-bottom:1px solid white;  
      
 }
-
 .nav-tabs{
-	border-bottom:1px solid black;	
+	 border-bottom: 1px solid black;
 }
-
+.active{
+	font-weight:bolder;
+	font-variant: small-caps;
+	font-size-adjust: inherit;
+}
 
 .nav-tabs .nav-link {
     margin-bottom: -1px;

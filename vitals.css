@@ -5,83 +5,43 @@
 	border-bottom:groove;
 }
 /*vital css*/
-.formfill{
+#form1,#form3,#form4{
 	margin-left:150px;
 
 	text-align:center;
 }
-#date1,#time{
-	font-weight:bold;
+#form2{
+	margin-left:140px;
 }
-#height{
-	width:50px;
+input[type=text]{
+	width:150px;
+}
+#date1,#time1,#date2,#time2,#date3,#time3,#date4,#time4{
+	font-weight:bold;
+	width:100px;
 }
 
-#dot,#unit{
-	width:50px;
+
+#dot,#unit,#height1,#height2{
+	width:20px;
 }
 .modal-header{
 	background-color:#dedede;
 	border-radius:10px;
 	height:50px;
 }
-#submit{
-	float: right;
-	width:100px;
-	background-color:#dedede;
-	}
-#cancel{
-	float:left;
-	width:100px;
-	background-color:#dedede;
-	margin-right:500px;
-	}
+
 #cancel1,#cancel2,#cancel3,#cancel4{
 	float:left;
 	width:100px;
 	background-color:#dedede;
 	margin-right:500px;
+	border:1px solid black;
+	
 }
 #submit1,#submit2,#submit3,#submit4{
 	float: right;
 	width:100px;
 	background-color:#dedede;
+	border:1px solid black;
 	}
-/*
-#header{
-	background-color: #D8D8D8;
-	border-radius:5px ; 
-	text-align: left;
-	height:50px;
-	margin-top:15px;
-	padding-top:15px;
-}
-#close{
-	float:right;
-	color:black;
-}
-
-.navbar{
-	background-color: #D8D8D8;
-	border-radius:5px ; 
-	text-align: left;
-	
-}
-
-.close {
-  position: absolute;
-  right: 35px;
-  color: black;
-  font-size: 30px;
-  font-weight: bold;
-  transition: 0.3s;
-  align-self: center;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-*/
