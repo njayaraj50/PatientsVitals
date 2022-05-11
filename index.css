@@ -25,19 +25,20 @@
     border-left:1px solid black;
     border-top:1px solid black;
     border-right:1px solid black;
-     
+   
 }
 .nav-tabs{
 	 border-bottom: 1px solid black;
+	 margin-top:50px;
+	 
 }
 .active{
 	font-weight:bolder;
 	font-variant: small-caps;
-	font-size-adjust: inherit;
+	height:40px;
 }
 
 .nav-tabs .nav-link {
-    margin-bottom: -1px;
     background: 0 0;
     border: 1px solid black;
     border-top-left-radius: .25rem;
@@ -46,8 +47,7 @@
     width:100%;
     text-align:center;
     font-size:large;
-    color:black;
-    
+    color:black;   
 }
 li.nav-item{
 	margin:0px .8px  ;

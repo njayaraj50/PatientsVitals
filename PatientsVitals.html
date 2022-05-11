@@ -38,8 +38,8 @@
 
 <div class="container mt-3 ">
       <ul class="nav nav-tabs" id="navMenus1">
-         <li class="nav-item" >
-            <a  class="nav-link " href="#collapse1" data-bs-toggle="collapse">Vitals Table</a>
+         <li class="nav-item" id="navItem1">
+            <a id="vital" class="nav-link " href="#collapse1" data-bs-toggle="collapse">Vitals Table</a>
          </li>
          <li class="nav-item">
             <a class="nav-link " href="#" data-bs-toggle="collapse">Graph</a>
@@ -241,72 +241,72 @@
     </thead>
     <tbody>
       <tr>
-        <td><b>Vitals:</b></td>
+        <td class="TD"><b>Vitals:</b></td>
         <td id="date2"><input type="text" class="form-control" name="date" required></td>
         <td id="time2"><input type="text" class="form-control" name="time" required></td>
       </tr>
       <tr>
-        <td>R<sub>ao</sub>:</td>
+        <td class="TD">R<sub>ao</sub>:</td>
         <td><input type="text" class="form-control" name="Rao" required></td>
         <td>mmHg.s.ml-l</td>
       </tr>
       <tr>
-        <td>C<sub>ao</sub>:</td>
+        <td class="TD">C<sub>ao</sub>:</td>
         <td><input type="text"  class="form-control" name="Cao" required></td>
         <td>ml/mmHg</td>
       </tr>
        <tr>
-        <td>R<sub>sv</sub>:</td>
+        <td class="TD">R<sub>sv</sub>:</td>
         <td><input type="text"  class="form-control" name="Rsv" required></td>
         <td>mmHg.s.ml-l</td>
       </tr>
        <tr>
-        <td>C<sub>SAC</sub>:</td>
+        <td class="TD">C<sub>SAC</sub>:</td>
         <td><input type="text" class="form-control" name="Sac" required></td>
         <td>ml/mmHg</td>
        
       </tr>
        <tr>
-        <td>R<sub>CA</sub>:</td>
+        <td class="TD">R<sub>CA</sub>:</td>
         <td><input type="text" class="form-control" name="Rca" required></td>
         <td>mmHg.s.ml-l</td>
       </tr>
        <tr>
-        <td>R<sub>ub</sub>:</td>
+        <td class="TD">R<sub>ub</sub>:</td>
         <td><input type="text" class="form-control" name="Rub" required></td>
       </tr>
        <tr>
-        <td>R<sub>pda</sub>:</td>
+        <td class="TD">R<sub>pda</sub>:</td>
         <td><input type="text" class="form-control" name="Rpda" required></td>
-        <td>mmHg.s.ml-l</td>
+        <td id="cunit">mmHg.s.ml-l</td>
       </tr>
        <tr>
-        <td>P<sub>CVO</sub>:</td>
+        <td class="TD">P<sub>CVO</sub>:</td>
         <td><input type="text" class="form-control" name="Pcvo" required></td>
         <td>mmHg</td>
       </tr>
        <tr>
-        <td>Q<sub>mv</sub>:</td>
+        <td class="TD">Q<sub>mv</sub>:</td>
         <td><input type="text" class="form-control" name="Qmv" required></td>
        
       </tr>
        <tr>
-        <td>CBD:</td>
+        <td class="TD">CBD:</td>
         <td id="height1"><input type="text" class="form-control" name="cbd" required></td>
         <td>kg/m<sup>3</sup></td>
       </tr>
        <tr>
-        <td>CO:</td>
+        <td class="TD">CO:</td>
         <td><input type="text" class="form-control" name="CO" required></td>
         <td>/min</td>
       </tr>
        <tr>
-        <td>HR:</td>
+        <td class="TD">HR:</td>
         <td><input type="text" class="form-control" name="HR" required></td>
         <td>beats/min</td>
       </tr>
        <tr>
-        <td>T:</td>
+        <td class="TD">T:</td>
         <td><input type="text" class="form-control" name="T" required></td>
         <td>s</td>
       </tr>

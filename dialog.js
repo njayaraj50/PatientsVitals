@@ -293,9 +293,10 @@ function  refreshTime1() {
 			   $("#navMenus1 li.active").removeClass("active");
 			    // adding classname 'active' to current click li 
 			    $(this).addClass("active");
+			    
 			});
   		});
-  	  		
+  		
   		$(document).ready(function () {
   	  		
   				  $('.container li').click(function() {
@@ -310,5 +311,4 @@ function  refreshTime1() {
   				    // adding classname 'active' to current click li 
   				    $(this).addClass("active");
   				});
-  	  		});
-  		
+  		})

@@ -5,6 +5,10 @@
 	border-bottom:groove;
 }
 /*vital css*/
+.TD{
+	width:25px;
+	font-weight: thick;
+}
 #form1,#form3,#form4{
 	margin-left:150px;
 
@@ -12,9 +16,13 @@
 }
 #form2{
 	margin-left:140px;
+	text-align:center;
 }
 input[type=text]{
-	width:150px;
+	width:180px;
+}
+#cunit{
+	width:180px;
 }
 #date1,#time1,#date2,#time2,#date3,#time3,#date4,#time4{
 	font-weight:bold;
